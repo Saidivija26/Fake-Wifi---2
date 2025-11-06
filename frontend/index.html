@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Wi-Fi Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake Wi-Fi Detector</h1>
+
+        <section class="scanner-section">
+            <h2>Wi-Fi Scanner</h2>
+            <button id="refreshButton">Refresh Scan</button>
+            <p>Overall Risk Score: <span id="overallRiskScore">N/A</span></p>
+            <div id="scanResults">
+                <h3>Recent Scans</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SSID</th>
+                            <th>Signal</th>
+                            <th>Security</th>
+                            <th>Risk Score</th>
+                            <th>Suspicious</th>
+                            <th>Reason</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scanResultsTableBody">
+                        <!-- Scan results will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="fake-ap-section">
+            <h2>Create Fake Wi-Fi</h2>
+            <form id="createFakeWifiForm">
+                <label for="fakeSsid">SSID:</label>
+                <input type="text" id="fakeSsid" required>
+                <label for="fakePassword">Password (optional):</label>
+                <input type="password" id="fakePassword">
+                <button type="submit">Create Fake AP</button>
+            </form>
+            <div id="fakeWifiStatus"></div>
+            <h3>Created Fake Wi-Fi Networks</h3>
+            <ul id="createdFakeWifiList">
+                <!-- Created fake Wi-Fi networks will be listed here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
